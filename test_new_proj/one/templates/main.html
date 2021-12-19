@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+          width: 900px;
+          margin: 0 auto;
+          background-color: #FF9500;
+          padding: 0 20px 20px 20px;
+          border: 5px solid black;}
+        .b1{
+
+            background: navy; /* Синий цвет фона */
+            color: white; /* Белые буквы */
+            font-size: 9pt; /* Размер шрифта в пунктах */
+            margin-top: 20px;
+        }
+        .b2{
+            max-width: 8em; /* блок занимает ширину родителя, max-width её ограничивает */
+            min-height: 2em;
+            margin-left: auto;
+            margin-right: 15px;
+            background-color: #FF9500;
+            border: 0;
+        }
+    </style>
+
+
+    <title>Главная</title>
+</head>
+<body>
+    <h1>
+           Игры.
+    </h1>
+    <a>
+        В данный момент работает только 1 игра из 3-х, остальные находятся в разработке.
+    </a>
+
+    <form method="GET" action="{% url 'asteroids' %}">
+        <button class="b2" ><input class="b1" type="submit" value=" Игра Астероиды "></button>
+    </form>
+    <form method="GET" action="{% url 'tetris' %}">
+        <button class="b2" ><input class="b1" type="submit" value=" Игра Тетрис "></button>
+    </form>
+    <form method="GET" action="{% url 'mario' %}">
+        <button class="b2" ><input class="b1" type="submit" value=" Игра Марио "></button>
+    </form>
+
+</body>
+</html>

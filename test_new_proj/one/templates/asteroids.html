@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game?</title>
+    <style>
+        body {
+          width: 900px;
+          margin: 0 auto;
+          background-color: #FF9500;
+          padding: 0 20px 20px 20px;
+          border: 5px solid black;}
+        canvas {
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            }
+        a{
+            font-size: 20px;
+        }
+        p{
+            max-width: 8em; /* блок занимает ширину родителя, max-width её ограничивает */
+          min-height: 2em;
+          margin-left: auto;
+          margin-right: 15px;
+        }
+        .b1{
+
+            background: navy; /* Синий цвет фона */
+            color: white; /* Белые буквы */
+            font-size: 9pt; /* Размер шрифта в пунктах */
+        }
+        .b2{
+            max-width: 8em; /* блок занимает ширину родителя, max-width её ограничивает */
+            min-height: 2em;
+            margin-left: auto;
+            margin-right: 15px;
+            background-color: #FF9500;
+            border: 0;
+        }
+        a.a1{
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <form method="GET" action="{% url 'main' %}">
+        <button class="b2" ><input class="b1" type="submit" value=" Вернуться на главную "></button>
+    </form>
+    <h1>
+       Игра астроиды.
+    </h1>
+    <a>
+        Передвигать персонажа на "A"-влево, "D"-вправо, Пробел-стрелять.
+    </a>
+    <canvas  id = "game" width="900" height="600"></canvas>
+    <script type="text/javascript"  src="{% static 'js/game.js' %}"> </script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game?</title>
+    <style>
+        body {
+          width: 900px;
+          margin: 0 auto;
+          background-color: #FF9500;
+          padding: 0 20px 20px 20px;
+          border: 5px solid black;}
+        img {
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            }
+        a{
+            font-size: 20px;
+        }
+        
+        .b1{
+
+            background: navy; /* Синий цвет фона */
+            color: white; /* Белые буквы */
+            font-size: 9pt; /* Размер шрифта в пунктах */
+        }
+        .b2{
+            max-width: 8em; /* блок занимает ширину родителя, max-width её ограничивает */
+            min-height: 2em;
+            margin-left: auto;
+            margin-right: 15px;
+            background-color: #FF9500;
+            border: 0;
+        }
+       
+    </style>
+</head>
+
+
+<body>
+
+    <form method="GET" action="{% url 'main' %}">
+        <button class="b2" ><input class="b1" type="submit" value=" Вернуться на главную "></button>
+    </form>
+    <h1>
+       Игра Марио.
+    </h1>
+    <a>
+        В процессе разработки
+    </a>
+    <p>
+        
+        <img src="./10.jpg" alt="Здесь должна быть картинка">
+    </p>
+</body>
+
+
+</html>
